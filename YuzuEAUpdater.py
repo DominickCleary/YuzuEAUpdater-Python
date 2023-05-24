@@ -181,8 +181,8 @@ def read_version():
 
 
 def download_file(asset_name):
-    file_path = YUZU_DIR / asset_name
     filename = CURRENT_APPIMAGE if PLAT == LINUX else asset_name
+    file_path = YUZU_DIR / filename
     if not os.path.isfile(file_path):
         response = urllib.request.urlopen(URL)
 
